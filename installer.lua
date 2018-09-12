@@ -12,9 +12,9 @@ shell.run("delete", "installer")
 term.setTextColor(colors.green)
 print("Downloading \"" .. thisRepoName .. "\" files..")
 term.setTextColor(colors.gray)
-shell.run("/wget", "https://raw.githubusercontent.com/" .. thisRepoName .. "/master/iemp.lua","/" .. thisRepoName .. "/iemp")
+shell.run("/wget", "https://raw.githubusercontent.com/ToTheCore/" .. thisRepoName .. "/master/iemp.lua","/" .. thisRepoName .. "/iemp", "-silent")
 
 -- Downloading installer/updater
-shell.run("/wget", "https://raw.githubusercontent.com/" .. thisRepoName .. "/master/updater.lua","/" .. thisRepoName .. "/updater")
-shell.run("/wget", "https://raw.githubusercontent.com/" .. thisRepoName .. "/master/installer.lua","/" .. thisRepoName .. "/installer")
+shell.run("/wget", "https://raw.githubusercontent.com/ToTheCore/" .. thisRepoName .. "/master/updater.lua","/" .. thisRepoName .. "/updater", "-silent")
+shell.run("/wget", "https://raw.githubusercontent.com/ToTheCore/" .. thisRepoName .. "/master/installer.lua","/" .. thisRepoName .. "/installer", "-silent")
 
