@@ -54,17 +54,9 @@ while true do
   monitor.setCursorPos(1,4)
   energylevel = cb.getEnergyStored()
   monitor.clearLine()
-  --------------------------
- -- function comma(number)
- --   if string.len(number) < 6 then
- --   elseif string.len(number) > 6 then
- --     number = string.gsub(number, "^(-?%d+)(%d%d%d)(%d%d%d)", '%1.%2.%3')
- --   end
- -- return number
- -- end
-  -----------------------
-  
-  monitor.write(numformat(energylevel).." RF")
+
+  number = energylevel -- avoid attempt to call nil error
+  monitor.write(numformat(number).." RF")
   
   -- RF trigger //
   if energylevel < MinRF then
