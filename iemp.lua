@@ -37,6 +37,7 @@ local monitor = peripheral.wrap("top")
 Console.WriteLine(Console.Type.Init, "Monitor found on top.", m)
 monitor.clear()
 monitor.setTextColor(colors.green)
+monitor.setTextScale(0.5)
 -- monitor.setBackgroundColor(255) --deactivated for later
 monitor.setCursorPos(1,1)
 monitor.write("Intelligent Energy Management Program [IEMP] ver " .. version)
